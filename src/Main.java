@@ -73,9 +73,8 @@ public class Main {
                     String hledame = sc.nextLine();
                     for (int i = 0; i < zvirata.size(); i++) {
                         if (hledame.equals(zvirata.get(i).getJmeno())) {
-                            System.out.println("Mazlicek se tam nachází");
-                            if (!hledame.equals(zvirata.get(i).getJmeno())) ;
-                            System.out.println("Mazlicek se tam nenachází");
+                            System.out.println(zvirata.get(i));
+
                         }
                     }
 
