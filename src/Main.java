@@ -74,7 +74,6 @@ public class Main {
                     for (int i = 0; i < zvirata.size(); i++) {
                         if (hledame.equals(zvirata.get(i).getJmeno())) {
                             System.out.println(zvirata.get(i));
-
                         }
                     }
 
