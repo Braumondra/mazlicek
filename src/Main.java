@@ -23,8 +23,8 @@ public class Main {
             zvirata.add(new mazlicek(jmeno, druh, vek, vaha));
         }
 */
-        String input = "" ;
-        while (!input.equals(0)) {
+        String input = "";
+        while (!input.equals("0")) {
             System.out.println("zadejte číslo:\n 1 prídáte mazlíčka \n 2 vypíše info \n 3 průměr věku " +
                     "\n 4 průměr váhy\n 5 hledaní jména mazlíček \n 6 druh mazlíčka  \n 0:konec");
             input = sc.nextLine();
@@ -44,9 +44,8 @@ public class Main {
                     break;
                 case "2":
                     for (int i = 0; i < zvirata.size(); i++) {
-                        System.out.println(zvirata.get(i).getJmeno() + ",");
+                        System.out.println(zvirata.get(i).getJmeno());
                     }
-                    sc.nextLine();
                     break;
                 case "3":
                     double prumer = 0;
@@ -69,7 +68,7 @@ public class Main {
                     break;
 
                 case "5":
-                    System.out.println("Zadejte jméno mazlíčka ,kterýho hledáte");
+                    System.out.println("Zadejte jméno mazlíčka, kterého hledáte");
                     String hledame = sc.nextLine();
                     for (int i = 0; i < zvirata.size(); i++) {
                         if (hledame.equals(zvirata.get(i).getJmeno())) {
@@ -79,6 +78,7 @@ public class Main {
 
                     break;
                 case "6":
+                    System.out.println("Vypisování druhů v pole:");
                     for (int i = 0; i < zvirata.size(); i++) {
                         System.out.println(zvirata.get(i).getDruh());
                     }
@@ -89,6 +89,9 @@ public class Main {
                             System.out.println(zvirata.get(i));
                         }
                     }
+                    break;
+                case "0":
+                    System.out.println("Program se vypíná");
                     break;
                 default:
                     System.out.println("Nepasal jste špatné výchozí číslo");
